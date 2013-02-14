@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
+
+    <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet'>
+    <style>
+        body{font-family: 'Sanchez', serif; background-color: #fafafa}
+        h1 {color:yellowgreen; border-bottom: 1px dotted #666}
+        h1 small {font-size:14px; color:#666}
+        fieldset {border: 1px dotted #666}
+        input, button, select, label, textarea {
+            float:left;
+            clear:left
+        }
+        textarea {width:100%}
+        button {float:right}
+
+        /* underline accesskey letter */
+        form fieldset.contact label:first-letter {
+            text-decoration:underline
+        }
+        .invalid {
+            border:1px solid #f00
+        }
+    </style>
+
+    <title>jquery.saveform.js | Saves automatically all entered form fields.</title>
+</head>
+
+<body>
+    <h1>Saveform <small>// Stores your form fields</small></h1>
+
+    <form id='form' action='#' method='post' name='f'>
+        <fieldset class='address'>
+            <legend>Address</legend>
+            <label>Company Corp.</label>
+            <label>Street 123</label>
+            <label>12345 ZIP</label>
+            <label><br/></label>
+            <label>Fon: +09 876 - 54 321</label>
+            <label>Mail: <a href='mailto:mail@domain.tld'>mail@domain.tld</a></label>
+        </fieldset>
+
+        <fieldset class='contact'>
+            <legend>Contact</legend>
+            <label for='name' accesskey='n'>Name:</label>
+            <input name='name' type='text' id='name' title='Name'>
+
+            <label for='email' accesskey='e'>Email:</label>
+            <input name='email' type='email' id='email' title='E-Mail'>
+
+            <label for='website' accesskey='w'>Website:</label>
+            <input name='website' type='website' id='website' title='Website'>
+
+            <label for='select' accesskey='s'>Select:</label>
+            <select id='select'>
+                <option value='foo'>foo</option>
+                <option value='bar'>bar</option>
+            </select>
+
+            <input type='checkbox' name='foo'>
+            <input type='checkbox' name='bar'>
+            <input type='radio' name='foo'>
+            <input type='radio' name='bar'>
+
+            <label for='password' accesskey='p'>Password</label>
+            <input type='password' id='password' name='password'>
+
+            <label for='message' accesskey='m'>Message:</label>
+            <textarea name='message' id='message' rows='8' cols='32' title='Message'></textarea>
+
+            <button type='reset'>Reset</button>
+            <button type='submit'>Submit</button>
+        </fieldset>
+    </form>
+
+    <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+    <script src='jquery.saveform.js'></script>
+    <script>
+        $('#form').autosave();
+    </script>
+</body>
+</html>
