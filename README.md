@@ -2,11 +2,11 @@
 (feel free to write a bit about it)
 
 ## Download
- Get the [raw](https://raw.github.com/yckart/jquery.ga.js/master/jquery.ga.js) script, download the complete [package](https://github.com/yckart/jquery.ga.js/zipball/master) or fork it on [GitHub](https://github.com/yckart/jquery.ga.js/).
+ Get the [raw](https://raw.github.com/yckart/jquery.saveform.js/master/jquery.saveform.js) script, download the complete [package](https://github.com/yckart/jquery.saveform.js/zipball/master) or fork it on [GitHub](https://github.com/yckart/jquery.saveform.js/).
 
 ## Support
 
- [@yckart](http://twitter.com/yckart) #jquery #ga
+ [@yckart](http://twitter.com/yckart) #jquery #saveform
  [http://yckart.com](http://yckart.com/)
 
 
